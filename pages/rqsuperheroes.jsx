@@ -10,7 +10,8 @@ const RQSuperHeroes = () => {
 		'super-heroes',
 		fetchSuperHeroes,
 		{
-			staleTime: 30000
+			refetchOnMount: true,
+			refetchOnWindowFocus: true
 		}
 	);
 
