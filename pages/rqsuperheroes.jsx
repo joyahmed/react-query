@@ -6,24 +6,26 @@ const fetchSuperHeroes = () => {
 };
 
 const RQSuperHeroes = () => {
-	const { isLoading, data, isError, error, isFetching } = useQuery(
+	const { isLoading, data, isError, error, isFetching, refetch } = useQuery(
 		'super-heroes',
 		fetchSuperHeroes,
 		{
-			refetchInterval: 2000,
-			refetchIntervalInBackground: true
+			enabled: false
 		}
 	);
 
 	console.log(isLoading, isFetching);
 
-	if (isLoading) return <h2>Loading...</h2>;
+	if (isLoading || isFetching) return <h2>Loading...</h2>;
 
 	if (isError) return <h2>{error.message}</h2>;
 
 	return (
 		<div className='flex flex-col items-center justify-center w-screen h-[calc(100vh_-_7rem)] bg-gradient-to-b from-gray-900 via-black to-gray-900 space-y-5'>
-			<h2 className='text-lg font-semibold'>RQ Super Heroes</h2>
+      <h2 className='text-lg font-semibold'>RQ Super Heroes</h2>
+      <button
+      onClick={refetch}
+      >Fetch Heroes</button>
 			<div className='flex flex-col items-center justify-center border-[1px] p-4 rounded-sm w-1/2'>
 				{data?.data?.map(hero => (
 					<div
