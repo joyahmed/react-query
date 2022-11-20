@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+What ?
+React Query is a library for fetching data in a React application
 
-## Getting Started
+Why?
+1. Since React is a UI library, there is no specific pattern for data fetching
+2. useEffect hook for data fetching and useState hook to maintain component state like loading, error or resulting data
+3. If the data is needed throughout the app, we tend to use state management libraries
+4. Most of the state management libraries are good for working with client state.
+   Ex: 'theme' for the application / whether a modal is open
+5. State management libraries are not great for working with asyncrhonous or server state
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Client vs Server State
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Client State
+Persisted in your app memory and accessing or updating it is syncrhonous
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Server State
+Persisted remotely and requires asynchronous APIs for fetching or updating
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Has shared ownership
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Data can be updated by someone else without your knowledge
 
-## Learn More
+UI data may not be in sync with the remote data
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Challenging when you have to deal with caching, deduping multiple requests for the same data, updating stale data in the background, perfromance optimizations, etc
