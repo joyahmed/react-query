@@ -1,79 +1,96 @@
 {
-	"superheroes": [
-		{
-			"id": 1,
-			"name": "Batman",
-			"slug": "batman",
-			"alterEgo": "Bruce Wayne"
-		},
-		{
-			"id": 2,
-			"name": "Superman",
-			"slug": "superman",
-			"alterEgo": "Clark Kent"
-		},
-		{
-			"id": 3,
-			"name": "Wonder Woman",
-			"slug": "wonder-woman",
-			"alterEgo": "Princess Diana"
-		}
-	],
-	"friends": [
-		{
-			"id": 1,
-			"name": "Chandler Bing"
-		},
-		{
-			"id": 2,
-			"name": "Joey Tribbiani"
-		},
-		{
-			"id": 3,
-			"name": "Rachel Green"
-		}
-	],
-	"users": [
-		{
-			"id": "joy@gmail.com",
-			"channelId": "joy@dev"
-		}
-	],
-	"channels": [
-		{ "id": "joy@dev", "courses": ["react", "next.js", "game-dev"] }
-	],
-	"colors": [
-		{
-			"id": 1,
-			"label": "red"
-		},
-		{
-			"id": 2,
-			"label": "blue"
-		},
-		{
-			"id": 3,
-			"label": "green"
-		},
-		{
-			"id": 4,
-			"label": "yellow"
-		},
-		{
-			"id": 5,
-			"label": "black"
-		},
-		{
-			"id": 6,
-			"label": "white"
-		},
-		{
-			"id": 7,
-			"label": "orange"
-		},
-		{
-			"id": 8,
-			"label": "purple"
-		}
-	]
+  "superheroes": [
+    {
+      "id": 1,
+      "name": "Batman",
+      "slug": "batman",
+      "alterEgo": "Bruce Wayne"
+    },
+    {
+      "id": 2,
+      "name": "Superman",
+      "slug": "superman",
+      "alterEgo": "Clark Kent"
+    },
+    {
+      "id": 3,
+      "name": "Wonder Woman",
+      "slug": "wonder-woman",
+      "alterEgo": "Princess Diana"
+    },
+    {
+      "name": "The Flash",
+      "alterEgo": "Barry Allen",
+      "id": 4
+    },
+    {
+      "name": "Shazam",
+      "alterEgo": "Billy Batson",
+      "id": 5
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "Chandler Bing"
+    },
+    {
+      "id": 2,
+      "name": "Joey Tribbiani"
+    },
+    {
+      "id": 3,
+      "name": "Rachel Green"
+    }
+  ],
+  "users": [
+    {
+      "id": "joy@gmail.com",
+      "channelId": "joy@dev"
+    }
+  ],
+  "channels": [
+    {
+      "id": "joy@dev",
+      "courses": [
+        "react",
+        "next.js",
+        "game-dev"
+      ]
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "label": "red"
+    },
+    {
+      "id": 2,
+      "label": "blue"
+    },
+    {
+      "id": 3,
+      "label": "green"
+    },
+    {
+      "id": 4,
+      "label": "yellow"
+    },
+    {
+      "id": 5,
+      "label": "black"
+    },
+    {
+      "id": 6,
+      "label": "white"
+    },
+    {
+      "id": 7,
+      "label": "orange"
+    },
+    {
+      "id": 8,
+      "label": "purple"
+    }
+  ]
 }
