@@ -1,7 +1,5 @@
 import Link from 'next/link';
 import React from 'react';
-import RQSuperHeroes from '../pages/rqsuperheroes';
-import SuperHeroes from '../pages/superheroes';
 
 const Navbar = () => {
 	return (
@@ -11,6 +9,7 @@ const Navbar = () => {
 			</div>
 			<div className='flex items-center justify-around w-1/3 font-semibold text-sm'>
 				<Link href='rqsuperheroes'>RQ Super Heroes</Link>
+				<Link href='parallel'>RQ Heroes + Friends</Link>
 				<Link href='superheroes'>Super Heroes</Link>
 			</div>
 		</div>
