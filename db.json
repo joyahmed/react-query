@@ -32,5 +32,14 @@
 			"id": 3,
 			"name": "Rachel Green"
 		}
+	],
+	"users": [
+		{
+			"id": "joy@gmail.com",
+			"channelId": "joy@dev"
+		}
+	],
+	"channels": [
+		{ "id": "joy@dev", "courses": ["react", "next.js", "game-dev"] }
 	]
 }
