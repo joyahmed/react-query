@@ -6,12 +6,14 @@ const fetchSuperHeroes = () => {
 };
 
 const RQSuperHeroes = () => {
-	const { isLoading, data } = useQuery(
+	const { isLoading, data, isError, error } = useQuery(
 		'super-heroes',
 		fetchSuperHeroes
 	);
 
 	if (isLoading) return <h2>Loading...</h2>;
+
+	if (isError) return <h2>{error.message}</h2>; 
 
 	return (
 		<div className='flex flex-col items-center justify-center w-screen h-[calc(100vh_-_7rem)] bg-gradient-to-b from-gray-900 via-black to-gray-900 space-y-5'>
