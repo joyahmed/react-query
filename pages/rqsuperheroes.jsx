@@ -6,15 +6,19 @@ const fetchSuperHeroes = () => {
 };
 
 const RQSuperHeroes = () => {
-	const { isLoading, data, isError, error, isFetching, refetch } = useQuery(
-		'super-heroes',
-		fetchSuperHeroes,
-		{
-			enabled: false
-		}
-	);
+	const onSuccess = (data) => {
+		console.log('Perform side effect after data fetching =>', data);
+	};
 
-	console.log(isLoading, isFetching);
+	const onError = (data) => {
+		console.log('Perform side effect after encountering error =>', data);
+	};
+
+	const { isLoading, data, isError, error, isFetching, refetch } =
+		useQuery('super-heroes', fetchSuperHeroes, {
+			onSuccess,
+			onError
+		});
 
 	if (isLoading || isFetching) return <h2>Loading...</h2>;
 
@@ -22,10 +26,8 @@ const RQSuperHeroes = () => {
 
 	return (
 		<div className='flex flex-col items-center justify-center w-screen h-[calc(100vh_-_7rem)] bg-gradient-to-b from-gray-900 via-black to-gray-900 space-y-5'>
-      <h2 className='text-lg font-semibold'>RQ Super Heroes</h2>
-      <button
-      onClick={refetch}
-      >Fetch Heroes</button>
+			<h2 className='text-lg font-semibold'>RQ Super Heroes</h2>
+			<button onClick={refetch}>Fetch Heroes</button>
 			<div className='flex flex-col items-center justify-center border-[1px] p-4 rounded-sm w-1/2'>
 				{data?.data?.map(hero => (
 					<div
