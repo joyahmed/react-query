@@ -2,17 +2,20 @@
 	"superheroes": [
 		{
 			"id": 1,
-			"name": "Batman the Dark Knight",
+			"name": "Batman",
+			"slug": "batman",
 			"alterEgo": "Bruce Wayne"
 		},
 		{
 			"id": 2,
 			"name": "Superman",
+			"slug": "superman",
 			"alterEgo": "Clark Kent"
 		},
 		{
 			"id": 3,
 			"name": "Wonder Woman",
+			"slug": "wonder-woman",
 			"alterEgo": "Princess Diana"
 		}
 	]

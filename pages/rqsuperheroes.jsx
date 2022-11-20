@@ -1,4 +1,5 @@
 import { useSuperHeroesData } from '../hooks/useSuperHeroesData';
+import Link from 'next/link'
 
 const RQSuperHeroes = () => {
 	const onSuccess = data => {
@@ -24,22 +25,22 @@ const RQSuperHeroes = () => {
 			<h2 className='text-lg font-semibold'>RQ Super Heroes</h2>
 			<button onClick={refetch}>Fetch Heroes</button>
 			<div className='flex flex-col items-center justify-center border-[1px] p-4 rounded-sm w-1/2'>
-				{/* {data?.data?.map(hero => (
+				{data?.data?.map(hero => (
 					<div
 						key={hero.name}
 						className='flex flex-col items-center justify-center w-full'
 					>
-						{hero.name}
+						<Link href={`rqsuperheroes/${hero.id}`}>{hero.name}</Link>
 					</div>
-				))} */}
-				{data?.map(heroName => (
+				))}
+				{/* {data?.map(heroName => (
 					<div
 						key={heroName}
 						className='flex flex-col items-center justify-center w-full'
 					>
 						{heroName}
 					</div>
-				))}
+				))} */}
 			</div>
 		</div>
 	);
