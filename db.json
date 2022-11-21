@@ -37,6 +37,11 @@
       "name": "Aquaman",
       "alterEgo": "Arthur Curry",
       "id": 7
+    },
+    {
+      "name": "Thor",
+      "alterEgo": "Dr. Donald Blake",
+      "id": 8
     }
   ],
   "friends": [
